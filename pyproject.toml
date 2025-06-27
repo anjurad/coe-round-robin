@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "coe-round-robin"
+version = "0.1.0"
+description = "Tools and scripts for creating randomised round-robin TE sheets for the Data CoE team."
+authors = [
+    { name = "Gerhard Groenewald", email = "gerhard.groenewald@ansgroup.co.uk" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy==2.2.6",
+    "pandas==2.2.3",
+    "python-dateutil==2.9.0.post0",
+    "pytz==2025.2",
+    "six==1.17.0",
+    "tzdata==2025.2",
+    "XlsxWriter==3.1.0",
+    "openpyxl==3.1.5",
+    "pytest==8.3.5",
+    "python-dotenv==1.1.0"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["test"]
