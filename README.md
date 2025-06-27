@@ -1,6 +1,6 @@
 # COE Round Robin Python Project
 
-[![Azure DevOps Repo](https://img.shields.io/badge/Azure%20DevOps-Repo-blue?logo=azuredevops)](https://dev.azure.com/ANS-Profsvc/CoE%20-%20Data%20-%20Internal/_git/coe-round-robin)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/anjurad/coe-round-robin)
 
 This project provides tools and scripts for working with customer and resource data, including data processing and analysis. The codebase is organized for clarity and ease of use, with a focus on reproducibility and testability.
 
@@ -32,7 +32,7 @@ coe-round-robin/
 
 1. **Clone the repository:**
    ```sh
-   git clone https://dev.azure.com/ANS-Profsvc/CoE%20-%20Data%20-%20Internal/_git/coe-round-robin
+   git clone https://github.com/anjurad/coe-round-robin
    git lfs install # if using Git LFS (optional)
    cd coe-round-robin
    ```
@@ -162,4 +162,4 @@ This project is licensed under the Apache License 2.0.
 
 - Ensure your virtual environment is activated before running or testing the code.
 - Update `pyproject.toml` if you add new dependencies. You may also update `requirements.txt` for compatibility.
-- For any issues, please open an issue in the [Azure DevOps repository](https://dev.azure.com/ANS-Profsvc/CoE%20-%20Data%20-%20Internal/_git/coe-round-robin).
+- For any issues, please open an issue in the [GitHub repository](https://github.com/anjurad/coe-round-robin/issues).
