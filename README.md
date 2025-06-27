@@ -72,6 +72,66 @@ coe-round-robin/
   ```
 - Data files are located in the `data/` directory.
 
+## Editing the Excel Data File
+
+The project uses an Excel file to define customers and resources for the round-robin assignment. Here's how to edit it:
+
+### File Location
+The input Excel file is located at: `data/Data CoE Team & Customers.xlsx`
+
+### Sheet Structure
+The Excel file must contain exactly **two sheets**:
+
+#### 1. `customers` Sheet
+This sheet defines the customers and their allocated hours.
+
+**Required Columns:**
+- `customer` (text): Customer name or identifier
+- `hours` (integer): Number of hours allocated to this customer (must be positive)
+- `userstory` (integer): User story ID or reference number
+
+**Example:**
+| customer | hours | userstory |
+|----------|-------|-----------|
+| Maria Scott | 120 | 73585 |
+| Isabella Hall | 60 | 76160 |
+| Alice Johnson | 30 | 20862 |
+
+#### 2. `resources` Sheet
+This sheet defines the resources (team members) who will be assigned customers.
+
+**Required Columns:**
+- `resource` (text): Resource name or identifier
+
+**Example:**
+| resource |
+|----------|
+| Daniel Gray |
+| Felix Ingram |
+| Kylie Novak |
+
+### Data Format Requirements
+- **No empty cells** in required columns
+- `hours` must be positive integers (greater than 0)
+- `userstory` must be numeric (integer values)
+- Text fields (`customer`, `resource`) should not contain special characters that might cause Excel parsing issues
+- Sheet names must be exactly `customers` and `resources` (case-sensitive)
+
+### Common Mistakes to Avoid
+1. **Missing sheets**: Ensure both `customers` and `resources` sheets exist
+2. **Incorrect column names**: Column headers must match exactly (case-sensitive)
+3. **Empty cells**: All required columns must have values for every row
+4. **Wrong data types**: Use integers for `hours` and `userstory`, not decimals or text
+5. **Zero or negative hours**: Hours must be positive integers
+6. **Extra sheets**: Additional sheets are ignored, but the required sheets must be present
+
+### Tips for Success
+- **Backup your data**: Make a copy of the Excel file before editing
+- **Use consistent naming**: Keep customer and resource names consistent throughout
+- **Check data types**: Ensure numeric columns contain only numbers
+- **Validate after editing**: Run the application to verify your changes work correctly
+- **Hours allocation**: The `hours` values determine how frequently each customer appears in the output - higher hours means more occurrences
+
 ## Project Configuration
 
 - All project metadata and dependencies are specified in [`pyproject.toml`](./pyproject.toml).
